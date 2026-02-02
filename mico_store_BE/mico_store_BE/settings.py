@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mico_store_api_v1',
+    'mensah',
 ]
 
 MIDDLEWARE = [
