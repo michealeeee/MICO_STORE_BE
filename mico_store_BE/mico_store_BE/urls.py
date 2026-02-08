@@ -20,5 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mico/',include('mico_store_api_v1.urls')),
-#     path('mensah/',include('mensah.urls'))
+    path('mensah/',include('mensah.urls')),
 ]
