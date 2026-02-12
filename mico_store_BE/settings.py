@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-+c#6fa4vyrjg2wu=!w4s!^^zrh6e#!n=eypmg!xw!zw(y3&uos
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'mico-store-be.onrender.com',
+]
+
 
 
 # Application definition
