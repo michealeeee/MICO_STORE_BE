@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+c#6fa4vyrjg2wu=!w4s!^^zrh6e#!n=eypmg!xw!zw(y3&uos
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'mico-store-be.onrender.com',
+    'https://mico-store-be.onrender.com',
 ]
 
 
