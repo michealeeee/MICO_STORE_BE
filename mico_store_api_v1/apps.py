@@ -10,3 +10,4 @@ class MicoStoreApiV1Config(AppConfig):
         connect(db = 'MICOSTOREDB',
                 host='mongodb+srv://mke00007_db_user:ofLjBkXKyzGZgYKJ@micostoredb.vs6rvei.mongodb.net/?appName=MICOSTOREDB',)
         
+        

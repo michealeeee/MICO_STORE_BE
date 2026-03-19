@@ -4,7 +4,6 @@ django-cors-headers
 djangorestframework-simplejwt
 asgiref
 gunicorn
-
 mongoengine
 pymongo
 dnspython

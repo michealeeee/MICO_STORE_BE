@@ -13,8 +13,11 @@ class CreateUserAPIView(APIView):
         if mike_data.is_valid():
             mike_valid_data=mike_data.validated_data
             u=User(name=mike_valid_data['name'],
-                   age=mike_valid_data['age'],
-                   email=mike_valid_data['email']                                                       
+                   gender=mike_valid_data['gender'],
+                   email=mike_valid_data['Email'],
+                   tel=mike_valid_data['tel'],
+                   password=mike_valid_data['password'],
+                   DOR=mike_valid_data['DOR']                              
                    )
             u.save()
             serialized_data = UserSerializer(u)
