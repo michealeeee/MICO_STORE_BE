@@ -14,7 +14,7 @@ class CreateUserAPIView(APIView):
         if mike_data.is_valid():
             mike_valid_data=mike_data.validated_data
             u=User(name=mike_valid_data['name'],
-                   gender=mike_valid_data['gender'],
+                   gender_=mike_valid_data['gender_'],
                    email=mike_valid_data['email'],
                    tel=mike_valid_data['tel'],
                    password=mike_valid_data['password'],
