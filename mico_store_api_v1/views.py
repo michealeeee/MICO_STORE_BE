@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from .serializers import UserSerializer
+from datetime import datetime
 # Create your views here.
 
 class CreateUserAPIView(APIView):
@@ -14,10 +15,10 @@ class CreateUserAPIView(APIView):
             mike_valid_data=mike_data.validated_data
             u=User(name=mike_valid_data['name'],
                    gender=mike_valid_data['gender'],
-                   email=mike_valid_data['Email'],
+                   email=mike_valid_data['email'],
                    tel=mike_valid_data['tel'],
                    password=mike_valid_data['password'],
-                   DOR=mike_valid_data['DOR']                              
+                   DOR=datetime.now()                            
                    )
             u.save()
             serialized_data = UserSerializer(u)
