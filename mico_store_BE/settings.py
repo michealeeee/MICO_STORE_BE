@@ -28,9 +28,14 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "mico-store-be.onrender.com",
     "localhost",
-    "127.0.0.1"
-]
+    "127.0.0.1",
+    "http://localhost:5173/"
 
+]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173/",
+    "http://localhost:8000",  # If testing locally with a frontend
+]
 
 
 # Application definition
@@ -45,6 +50,7 @@ INSTALLED_APPS = [
     'mico_store_api_v1',
     'mensah',
     'rest_framework',
+
 ]
 
 MIDDLEWARE = [
