@@ -29,12 +29,11 @@ ALLOWED_HOSTS = [
     "mico-store-be.onrender.com",
     "localhost",
     "127.0.0.1",
-    "http://localhost:5173/"
 
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "http://localhost:8000",  # If testing locally with a frontend
+    "mico-store-be.onrender.com",
 ]
 
 
