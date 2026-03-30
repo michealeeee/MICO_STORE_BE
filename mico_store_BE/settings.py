@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+c#6fa4vyrjg2wu=!w4s!^^zrh6e#!n=eypmg!xw!zw(y3&uos
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "mico-store-be.onrender.com",
+    "mico-store-be-1.onrender.com",
     "localhost",
     "127.0.0.1",
 
@@ -37,7 +37,7 @@ CCORS_ALLOW_ALL_ORIGINS = True  # DEBUG ONLY
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://mico-store-be.onrender.com",
+    "https://mico-store-be-1.onrender.com",
 ]
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
