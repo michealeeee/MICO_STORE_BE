@@ -33,6 +33,13 @@ ALLOWED_HOSTS = [
 ]
 from corsheaders.defaults import default_headers
 
+CCORS_ALLOW_ALL_ORIGINS = True  # DEBUG ONLY
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "https://mico-store-be.onrender.com",
+]
+
 CORS_ALLOW_HEADERS = list(default_headers) + [
     "content-type",
 ]
@@ -45,10 +52,9 @@ CORS_ALLOW_METHODS = [
     "DELETE",
     "OPTIONS",
 ]
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "https://mico-store-be.onrender.com",
-]
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_PREFLIGHT_MAX_AGE = 86400
 
 
 # Application definition
