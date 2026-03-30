@@ -33,7 +33,7 @@ ALLOWED_HOSTS = [
 
 ]
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173/",
+    "http://localhost:5173",
     "http://localhost:8000",  # If testing locally with a frontend
 ]
 
