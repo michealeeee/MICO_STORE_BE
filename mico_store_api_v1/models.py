@@ -5,7 +5,7 @@ from mongoengine import Document, StringField,IntField,EmailField,DateField
 class User(Document):
     name = StringField()
     gender_ = StringField()
-    email = EmailField()
+    email = EmailField(required=True, unique=True)
     tel = StringField()
     password = StringField()
     DOR = DateField()
