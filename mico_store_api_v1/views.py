@@ -4,24 +4,24 @@ from .models import User
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
-from .serializers import UserSerializer
+from .serializers import UserSerializer,LoginSerializer
 from datetime import datetime
 # Create your views here.
 class LoginUserAPIView(APIView):
     def post(self,request):
-        mike_data = UserSerializer(data=request.data)
+        mike_data = LoginSerializer(data=request.data)
         if mike_data.is_valid():
             mike_valid_data=mike_data.validated_data
 
             email= mike_valid_data["email"]
             password = mike_valid_data["password"]
-            u=User.object.get(email=email,pasword=password)
+            u=User.objects.get(email=email,password=password)
             if u:
                 return Response({'success':'Logged in successfully'},status=200)
             else: 
                 return Response({'error':'Invalid email or password'},status=401)
         else:
-            return Response({'error': 'couldn\'t login the user'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"error": mike_data.errors}, status=400)
 
 
 class CreateUserAPIView(APIView):
