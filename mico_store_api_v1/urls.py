@@ -1,7 +1,10 @@
 from django.urls import path, include
-from .views import CreateUserAPIView, GetUserAPIView,GetAllUserAPIView,DeleteUserAPIView,UpdateUserAPIView
+from .views import CreateUserAPIView, GetUserAPIView,\
+    GetAllUserAPIView,DeleteUserAPIView,UpdateUserAPIView,LoginUserAPIView
+
 
 urlpatterns = [
+    path('user/signin',LoginUserAPIView.as_view(),name="An API that Login a user"),
     path('user/create',CreateUserAPIView.as_view(),name="An API that creates a user"),
     path('user/get/<name>',GetUserAPIView.as_view(),name="An API that gets a user"),
     path('user/all',GetAllUserAPIView.as_view(),name="An API that gets all users"),
